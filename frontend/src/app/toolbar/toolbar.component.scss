@@ -1,0 +1,16 @@
+.text {
+    font-size: small;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+span:nth-child(3) {
+    padding: 15px;
+}
+
+::ng-deep .mat-toolbar{
+    z-index: 998;
+    position: sticky !important;
+  }

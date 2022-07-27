@@ -1,0 +1,39 @@
+.actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: flex-end;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.confirm-btn {
+    color: white;
+    background-color: #673ab7;
+    margin: 1%;    
+}
+
+.confirm-btn.mat-flat-button.active:hover {
+    color: white;
+    background-color: #673ab7;    
+}
+
+.cancel-btn {
+    background-color: lightgray;
+    margin: 1%;    
+}
+
+.cancel-btn.mat-flat-button:hover {
+    background-color: lightgray;    
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}

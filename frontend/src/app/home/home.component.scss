@@ -1,0 +1,21 @@
+button.mat-flat-button{
+//    right: 20px;
+//    top: 10px;
+//    left: auto;
+//    position:absolute;
+//    float: right;
+   margin: 2% !important;    
+}
+
+button.mat-flat-button:hover {
+    background-color: rgb(54, 39, 138);    
+}
+.actions {
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    align-items: flex-start;
+    justify-content: space-around;
+}

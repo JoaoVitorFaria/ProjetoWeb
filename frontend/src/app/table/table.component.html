@@ -1,0 +1,63 @@
+<div class="example mat-elevation-z8">
+    <mat-table [dataSource]="dataSource" matSort #table>
+        <ng-container matColumnDef="codigo">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Código</mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.codigo}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="nome">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Nome </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.nome}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="endereco">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Endereço </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.endereco}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.email}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Status </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.status}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="isbn">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> ISBN </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.isbn}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="titulo">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Título </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.titulo}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="autor">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Autor </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.autor}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="editora">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Editora </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.editora}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="numero">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Número </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.numero}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="preco">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Preço </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.preco}} </mat-cell>
+        </ng-container>
+   
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;">
+        </mat-row>
+    </mat-table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" [pageSize]="5" showFirstLastButtons></mat-paginator>
+</div>

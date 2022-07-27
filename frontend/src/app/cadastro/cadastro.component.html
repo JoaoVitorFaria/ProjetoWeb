@@ -1,0 +1,106 @@
+<p>Cadastrar {{title}}</p>
+
+<div *ngIf="title == 'Associado'">
+    <form [formGroup]="dados">
+        <div class="row">
+            <mat-form-field floatLabel="always">
+                <mat-label>Nome</mat-label>
+                <input matInput formControlName="nome">
+            </mat-form-field>
+        </div>
+    
+        <div class="row">
+            <mat-form-field floatLabel="always">
+                <mat-label>Endereço</mat-label>
+                <input matInput formControlName="endereco">
+            </mat-form-field>
+        </div>
+    
+        <div class="row">
+            <mat-form-field floatLabel="always">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email">
+            </mat-form-field>
+        </div>
+    
+        <div class="row">
+            <mat-form-field floatLabel="always">
+                <mat-label>Senha provisória</mat-label>
+                <input matInput formControlName="senha">
+            </mat-form-field>
+        </div>
+    
+        <div class="row">
+            <mat-form-field floatLabel="always">
+                <mat-label>Status</mat-label>
+                <mat-select formControlName="status">
+                  <mat-option value="Grad">Graduando</mat-option>
+                  <mat-option value="Posgrad">Pós-graduando</mat-option>
+                  <mat-option value="Prof">Professor</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </form>
+</div>
+
+<div *ngIf="title == 'Publicação'">
+    <form [formGroup]="dados">
+        <div class="row">
+            <mat-form-field floatLabel="always">
+                <mat-label>ISBN</mat-label>
+                <input matInput formControlName="isbn">
+            </mat-form-field>
+        </div>
+    
+        <div class="row">
+            <mat-form-field floatLabel="always">
+                <mat-label>Título</mat-label>
+                <input matInput formControlName="titulo">
+            </mat-form-field>
+        </div>
+    
+        <div class="row">
+            <mat-form-field floatLabel="always">
+                <mat-label>Autor</mat-label>
+                <input matInput formControlName="autor">
+            </mat-form-field>
+        </div>
+    
+        <div class="row">
+            <mat-form-field floatLabel="always">
+                <mat-label>Editora</mat-label>
+                <input matInput formControlName="editora">
+            </mat-form-field>
+        </div>
+    </form>
+</div>
+
+<div *ngIf="title == 'Exemplar'">
+    <form [formGroup]="dados">
+        <div class="row">
+            <mat-form-field floatLabel="always">
+                <mat-label>Número</mat-label>
+                <input matInput formControlName="numero">
+            </mat-form-field>
+        </div>
+    
+        <div class="row">
+            <mat-form-field floatLabel="always">
+                <mat-label>ISBN</mat-label>
+                <input matInput formControlName="isbn">
+            </mat-form-field>
+        </div>
+    
+        <div class="row">
+            <mat-form-field floatLabel="always">
+                <mat-label>Preço</mat-label>
+                <input matInput formControlName="preco" type="number">
+            </mat-form-field>
+        </div>
+    </form>
+</div>
+
+<div class="actions">
+    <button mat-flat-button class="cancel-btn" (click)="close()">Cancelar</button>
+    <button mat-flat-button class="confirm-btn" [disabled]="!dados.valid" (click)="submit()">Salvar</button>
+</div>
